@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEMINODA 作 JSON 重複チェッカー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-panel">
+            <label id="upload-area">
+                <span class="upload-text">Json ファイルを選択する<br><small>(クリックしてアップロード)</small></span>
+                <input type="file" id="file-input" accept=".json">
+            </label>
+            <div id="preview-area">
+                <h2>Json ファイルのプレビュー</h2>
+                <pre id="json-preview"></pre>
+                <button onclick="location.reload()" style="margin-top:10px;">別のファイルを読み込む</button>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="right-top">
+                <h2>項目一覧</h2>
+                <ul id="key-list" class="key-list">
+                    <li style="color:#888;">ファイルが選択されていません</li>
+                </ul>
+            </div>
+            <div class="right-bottom">
+                <h2>判定結果</h2>
+                <div id="result-area">
+                    <p style="color:#888;">項目を選択してください</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
